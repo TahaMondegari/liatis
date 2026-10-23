@@ -1,0 +1,2 @@
+# Liara Billing API | servers: https://api.liara.ir | security: [{"bearerAuth":[]}]
+GET /v1/billing [getBilling] Get current user billing information  => {user?:{balance?:number, accountType?:string, minCreditAmount?:integer, isManualMinCredit?:boolean, minCreditLastNotifiedAt?:string}}

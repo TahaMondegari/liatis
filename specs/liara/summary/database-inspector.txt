@@ -1,0 +1,12 @@
+# Liara Database Inspector API Documentaion | servers: https://{database-inspector-url} | security: [{"jwt":[]},{"bearerAuth":[]}]
+GET /v1/databases/{databaseID}/roles [getAllRoles] Get All Roles in Database path:databaseID => {data?:[{rolename?:string, is_superuser?:boolean, can_inherit_roles?:boolean, can_create_roles?:boolean, can_create_databases?:boolean, can_login?:boolean, can_replicate?:boolean, connection_limit?:integer, valid_until?:string, member_of?:string, inherited_roles?:string}]}
+POST /v1/databases/{databaseID}/roles [createRole] Create Role in database path:databaseID BODY(application/json) {rolename?:string, password?:string, connectionLimit?:integer, validUntil?:string, privileges?:[enum(createdb|inherit|superuser|createrole|bypassrls|replication)]} => {message?:string}
+PUT /v1/databases/{databaseID}/roles/{roleName} [updateRole] Update Role path:databaseID path:roleName BODY(application/json) {password?:string, connectionLimit?:integer, validUntil?:string, privileges?:[enum(createdb|inherit|superuser|createrole|bypassrls|replication)]} => {message?:string}
+DELETE /v1/databases/{databaseID}/roles/{roleName} [deleteRole] Delete Role path:databaseID path:roleName => {message?:string}
+GET /v1/databases/{databaseID}/datasets [getAllDatasets] get all datasets in database (for example tables in SQL databases) path:databaseID => {data?:[{dataset_name?:string}]}
+GET /v1/databases/{databaseID}/datasets/{datasetName} [getDatasetByName] get dataset in database using its name path:databaseID path:datasetName query:page? query:count? => {data?:[object], schema?:object, count?:integer}
+POST /v1/databases/{databaseID}/queries [queries] Execute custom query path:databaseID BODY(application/json) {query?:string} => {data?:[object], schema?:object, count?:integer}
+POST /v1/databases/{databaseID}/datasets/{datasetName}/filter [filterDataset] Filter dataset data path:databaseID path:datasetName query:page? query:count? BODY(application/json) {filter?:[{column?:string, operator?:string, value?:any}]} => {data?:[object], schema?:object, count?:integer}
+POST /v1/databases/{databaseID}/datasets/{datasetName}/data [createData] Create data in dataset path:databaseID path:datasetName => {message?:string}
+PUT /v1/databases/{databaseID}/datasets/{datasetName}/data [updateData] Update data in dataset path:databaseID path:datasetName => {message?:string}
+DELETE /v1/databases/{databaseID}/datasets/{datasetName}/data [deleteData] Delete data in dataset path:databaseID path:datasetName => {message?:string}

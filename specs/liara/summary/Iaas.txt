@@ -1,0 +1,19 @@
+# Liara Iaas API Documentaion | servers: https://iaas-api.liara.ir | security: [{"jwt":[]},{"bearerAuth":[]}]
+GET /vm [getVMs] Get all vms  => {vms?:[{_id?:string, plan?:string, OS?:string, state?:enum(CREATED|CREATING|FROZEN|DELETED|DELETING), name?:string, createdAt?:string, power?:enum(POWERED_ON|POWERED_OFF|SUSPENDED)}]}
+POST /vm [createVM] Create a vm  BODY(application/json) {name?:string, OS?:enum(ubuntu-24.04|ubuntu-22.04|debian-12.9), plan?:enum(standard-base-g2|standard-plus-g2|pro-g2|pro-plus-g2|express-g2|express-plus-g2), config?:{sshPort?:string, SSHKeys?:[string]}} => {taskID?:string}
+GET /vm/{id} [getVMDetails] Get vm details path:id => {_id?:string, plan?:string, OS?:string, state?:enum(CREATED|RUNNING|STOPPED|DELETED), config?:{sshPort?:string, SSHKeys?:[string], rootPassword?:string, hostname?:string}, name?:string, createdAt?:string, guestState?:string, power?:enum(POWERED_ON|POWERED_OFF), IPs?:[{address?:string, version?:string}], planDetails?:{available?:boolean, region?:string, monthlyPrice?:number, hourlyPrice?:number, volume?:number, RAM?:{amount?:number}, CPU?:{amount?:number}, IPv4MonthlyPrice?:[number], IPv4HourlyPrice?:[number]}}
+DELETE /vm/{id} [deleteVM] Delete a vm path:id => {taskID?:string}
+POST /vm/unfreeze/{id} [unfreezeVM] Unfreeze a vm path:id
+GET /vm/traffic-graph/{id} [getVMTrafficGraph] Get traffic graph of a vm path:id => [{minute?:integer, dstip?:string, sumbytes?:string}]
+GET /vm/traffic-volume/{id} [getVMTrafficVolume] Get traffic volume of a vm path:id => [{dstip?:string, sumbytes?:string}]
+PATCH /vm/power/{id} [setVMPower] Set vm power path:id BODY(application/json) {action?:string}
+POST /vm/disk/{id} [createVMDisk] Create a new disk for a VM path:id BODY(application/json) {size?:number} => ?
+GET /vm/disk/{id} [getVMDiskDetails] Get disk details path:id => {availableSize?:number, disks?:[{_id?:string, name?:string, size?:number, createdAt?:string}]}
+DELETE /vm/disk/{vmID}/{diskID} [DeleteVMDisk] Delete a disk path:vmID path:diskID
+POST /vm/disk/{vmID}/{diskID} [extendVMDisk] Extend a vm Disk path:vmID path:diskID BODY(application/json) {newSize?:number} => {taskID?:string}
+POST /vm/reset-network/{id} [resetVMNetwork] Reset a vm network path:id => ?
+GET /vm/operation/{id} [getVMOperations] Get vm operations path:id => {operations?:[{name?:string, state?:string, createdAt?:string}]}
+POST /vm/reset-password/{id} [resetVMPassword] Reset a vm password path:id => {password?:string}
+PATCH /vm/resize/{id} [resizeVM] Resize a vm path:id BODY(application/json) {plan?:enum(standard-base-g2|standard-plus-g2|pro-g2|pro-plus-g2|express-g2|express-plus-g2)} => {taskID?:string}
+GET /plans [getPlans] Get all plans  => {plans?:object}
+GET /oss [getOperatingSystems] Get all available operating systems  => {ubuntu?:[string], debian?:[string]}

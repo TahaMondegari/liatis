@@ -1,0 +1,5 @@
+# AI - API Keys | servers: https://ai.liara.ir | security: [{"jwt":[]}]
+GET /v1/keys [listKeys] List API keys query:teamID? => [{_id?:string, name?:string, enabled?:boolean, workspaces?:[{_id?:string, name?:string}], createdBy?:{fullname?:string}, lastUsedAt?:string}]
+POST /v1/keys [createKey] Create an API key  BODY(application/json) {name:string, workspaces:[string]} => {name?:string, enabled?:boolean, workspaces?:[{_id?:string, name?:string}], key?:string, createdBy?:{fullname?:string}, _id?:string}
+PUT /v1/keys/{keyID} [updateKey] Update an API key path:keyID BODY(application/json) {name?:string, workspaces?:[string], enabled?:boolean} => {message?:string}
+DELETE /v1/keys/{keyID} [deleteKey] Delete an API key path:keyID => ?

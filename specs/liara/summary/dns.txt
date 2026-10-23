@@ -1,0 +1,11 @@
+# DNS | servers: https://dns-service.liara.ir | security: [{"jwt":[]}]
+GET /api/v1/zones [getListZones] List all zones  => {status?:string, data?:[{id?:string, name?:string, status?:string, currentNameServers?:[string], nameServers?:[string], lastCheckAt?:string, createdAt?:string}]}
+POST /api/v1/zones [createZone] Create Zone  BODY(application/json) {name:string} => {status?:string, data?:{id?:string, name?:string, status?:string, currentNameServers?:[string], nameServers?:[string], lastCheckAt?:string, createdAt?:string}}
+GET /api/v1/zones/{zone} [getZone] Get Zone path:zone => {status?:string, data?:{id?:string, name?:string, status?:string, currentNameServers?:[string], nameServers?:[string], lastCheckAt?:string, createdAt?:string}}
+DELETE /api/v1/zones/{zone} [deleteZone] Delete Zone path:zone => {status?:string, data?:string}
+PUT /api/v1/zones/{zone}/check [checkNameServer] check nameserver path:zone => {status?:string, data?:string}
+GET /api/v1/zones/{zone}/dns-records [getListDnsRecords] Get all dns record path:zone => {status?:string, data?:[{id?:string, name?:string, type?:string, ttl?:number, contents?:[object]}]}
+POST /api/v1/zones/{zone}/dns-records [createDnsRecord] Create dns record path:zone BODY(application/json) {name?:string, type?:string, ttl?:number, contents?:[{}]} => {status?:string, data?:{id?:string, name?:string, type?:string, ttl?:number, contents?:[{}]}}
+GET /api/v1/zones/{zone}/dns-records/{id} [getDnsRecord] Get dns record path:zone path:id => {status?:string, data?:{id?:string, name?:string, type?:string, ttl?:number, contents?:[{}]}}
+PUT /api/v1/zones/{zone}/dns-records/{id} [editDnsRecord] edit dns record path:zone path:id BODY(application/json) {name?:string, type?:string, ttl?:number, contents?:[{}]} => {status?:string, data?:{id?:string, name?:string, type?:string, ttl?:number, contents?:[{}]}}
+DELETE /api/v1/zones/{zone}/dns-records/{id} [deleteDnsRecord] delete dns record path:zone path:id => ?

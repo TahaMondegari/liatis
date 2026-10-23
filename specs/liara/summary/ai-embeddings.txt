@@ -1,0 +1,2 @@
+# AI - Embeddings | servers: https://ai.liara.ir | security: [{"apiKey":[]}]
+POST /api/{workspaceID}/v1/embeddings [createEmbedding] Create embeddings path:workspaceID BODY(application/json) {input:string | [string], model:string, dimensions?:number, encoding_format?:string, user?:string} => {object?:enum(list), data?:[{object?:enum(embedding), embedding?:[number], index?:integer}], model?:string, usage?:{prompt_tokens?:integer, total_tokens?:integer, total_cost_toman?:number, total_cost?:number}}

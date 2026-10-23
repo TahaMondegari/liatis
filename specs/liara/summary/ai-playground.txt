@@ -1,0 +1,5 @@
+# AI - Playground | servers: https://ai.liara.ir | security: [{"jwt":[]}]
+POST /api/v1/{workspaceID}/playground/chat/completions [playgroundChatCompletion] Playground chat completion path:workspaceID BODY(application/json) {model:string, messages:[{role:enum(user|assistant|system|developer|tool), content?:string | array}], stream?:boolean, temperature?:number, max_tokens?:integer, tools?:[object]} => object
+POST /api/v1/{workspaceID}/playground/images/generations [playgroundImageGeneration] Playground image generation path:workspaceID BODY(application/json) {prompt:string, model:string, n?:number, size?:string, quality?:string, output_format?:enum(png|jpeg|webp)} => object
+POST /api/v1/{workspaceID}/playground/images/edits [playgroundImageEdit] Playground image edit path:workspaceID BODY(multipart/form-data) {image?:[string], prompt?:string, model?:string, mask?:string} => object
+GET /api/v1/{workspaceID}/playground/models [playgroundListModels] Playground list models path:workspaceID => {object?:enum(list), data?:[{id?:string, name?:string, context_length?:integer}]}

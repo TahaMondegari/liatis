@@ -1,0 +1,35 @@
+{
+  "name": "@liara-agent/server",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "main": "dist/index.js",
+  "scripts": {
+    "dev": "tsx watch --env-file-if-exists=../../.env src/index.ts",
+    "start": "node --env-file-if-exists=../../.env dist/index.js",
+    "build": "tsc -p tsconfig.build.json",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "test": "vitest run",
+    "demo:replay": "tsx src/demo/replay.ts",
+    "probe:models": "tsx --env-file-if-exists=../../.env src/ai/probe.ts",
+    "patrol": "tsx --env-file-if-exists=../../.env src/monitor/worker.ts",
+    "docs:limitations": "tsx src/demo/limitations.ts"
+  },
+  "dependencies": {
+    "@fastify/cors": "11.3.1",
+    "@fastify/multipart": "10.1.6",
+    "@liara-agent/shared": "0.1.0",
+    "fastify": "5.12.7",
+    "fflate": "0.8.3",
+    "js-yaml": "4.1.0",
+    "tar": "7.5.22",
+    "zod": "4.6.7"
+  },
+  "devDependencies": {
+    "@types/js-yaml": "4.0.9",
+    "@types/node": "^24.0.0",
+    "tsx": "4.23.15",
+    "typescript": "5.9.3",
+    "vitest": "5.0.5"
+  }
+}

@@ -1,0 +1,2 @@
+# AI - Text to Speech | servers: https://ai.liara.ir | security: [{"apiKey":[]}]
+POST /api/{workspaceID}/v1/audio/speech [createSpeech] Generate speech from text path:workspaceID BODY(application/json) {input:string, model:string, voice?:string, response_format?:enum(mp3|pcm), speed?:number, input_references?:[object | object], provider?:{options?:object}} => string

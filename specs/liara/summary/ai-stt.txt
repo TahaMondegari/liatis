@@ -1,0 +1,2 @@
+# AI - Audio Transcriptions | servers: https://ai.liara.ir | security: [{"apiKey":[]}]
+POST /api/{workspaceID}/v1/audio/transcriptions [createTranscription] Transcribe audio path:workspaceID BODY(application/json) {model:string, input_audio:{data:string, format:enum(wav|mp3|flac|m4a|ogg|webm|aac)}, language?:string, response_format?:enum(json|verbose_json), temperature?:number, timestamp_granularities?:[enum(word|segment)]} => {text?:string, task?:string, language?:string, duration?:number, segments?:[{id?:integer, start?:number, end?:number, text?:string}]}

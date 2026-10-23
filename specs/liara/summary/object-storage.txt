@@ -1,0 +1,27 @@
+# Object Storage API Documentaion | servers: https://storage-service.liara.ir | security: [{"jwt":[]},{"bearerAuth":[]}]
+GET /api/v1/buckets [getBuckets] List all Buckets  => {status?:string, buckets?:[{id?:string, name?:string, plan?:string, status?:string, permission?:string, createdAt?:string, updatedAt?:string}]}
+POST /api/v1/buckets [createBucket] Create Bucket  BODY(application/json) {name?:string, plan?:string, permission?:string} => {status?:string}
+GET /api/v1/buckets/migrations [getMigrations] list migration operation  => {status?:string, migrations?:[object]}
+PATCH /api/v1/buckets/{bucket}/type/{permission} [changeBucketAccess] change Bucket Access Policy path:bucket path:permission => {status?:string, permission?:string}
+PATCH /api/v1/buckets/{bucket}/upgrade/{plan} [upgradeBucket] Upgrade Bucket path:bucket path:plan => {status?:string, quota?:string}
+GET /api/v1/buckets/{bucket} [getSingleBuckets] Get Single Buckets path:bucket => {status?:string, bucket?:{id?:string, name?:string, plan?:string, status?:string, permission?:string, createdAt?:string, updatedAt?:string}}
+DELETE /api/v1/buckets/{bucket} [destroyBucket] Destroy Bucket path:bucket => ?
+GET /api/v1/buckets/{bucket}/check-availability [checkBucket] Check Bucket availability path:bucket => {status?:string}
+POST /api/v1/buckets/migrates [migratingBuckets] Migrating buckets  BODY(application/json) {from?:string, to?:string, path?:string} => ?
+GET /api/v1/buckets/migration/from [getListPreviousBuckets] List storage service buckets  => ?
+GET /api/v1/keys [getListKeys] Get List of Keys  => {status?:string, keys?:[{id?:string, buckets?:[object], status?:string, accessKey?:string, description?:string, createdAt?:string, updatedAt?:string}]}
+POST /api/v1/keys [createKey] Create Keys  BODY(application/json) {buckets?:[object], description?:string} => {status?:string, data?:{accessKey?:string, secretKey?:string}}
+GET /api/v1/keys/{key} [getKey] Get Key path:key => ?
+DELETE /api/v1/keys/{key} [deleteKey] Delete Key path:key => ?
+PATCH /api/v1/keys/{key} [updateKey] Update key path:key BODY(application/json) {buckets?:[object], description?:string} => {status?:string}
+PATCH /api/v1/keys/{key}/revoke [revokeSecretKey] Revoke secret key path:key => {status?:string, accessKey?:string, secretKey?:string}
+GET /api/v1/buckets/{bucket}/download/${object} [downloadObject] Download Object path:bucket path:object query:expiry? => {status?:string, data?:{url?:string}}
+GET /api/v1/buckets/{bucket}/upload/{object} [uploadObject] Upload Object path:bucket path:object => {status?:string, data?:{url?:string}}
+GET /api/v1/buckets/{bucket}/objects/{prefix} [getListObjects] List Objects path:bucket path:prefix query:number? query:page? => {status?:string, data?:{objects?:{IsTruncated?:boolean, Contents?:[object], Name?:string, Prefix?:string, Delimiter?:string, MaxKeys?:number, CommonPrefixes?:[object], KeyCount?:number}}}
+DELETE /api/v1/buckets/{bucket}/objects/{prefix} [deleteObject] Delete Object path:bucket path:prefix => ?
+GET /api/v1/buckets/{bucket}/objects/statistics/{object} [getStatObject] Get Stat Object path:bucket path:object => {status?:string, data?:{object?:{size?:number, metaData?:{content-type?:string}, lastModified?:string, versionId?:string, etag?:string}}}
+POST /api/v1/buckets/{bucket}/folders [createFolder] Create Folder path:bucket BODY(application/json) {path?:string} => {status?:string, data?:{folder?:string}}
+DELETE /api/v1/buckets/{bucket}/folders [deleteFolder] Delete Folder path:bucket query:path => ?
+GET /api/v1/buckets/{bucket}/metrics/summary [getMetricsSummary] metrics summary path:bucket => {status?:string, data?:{bucket?:string, metrics?:{totol_objects?:[obj], total_bytes?:[obj]}}}
+GET /api/v1/buckets/{bucket}/metrics/historical [getHisotricalMetrics] hisotrical metrics path:bucket query:since => {status?:string, data?:{bucket?:string, metrics?:{totol_objects?:[obj]}}}
+GET /api/v1/buckets/{bucket}/metrics/{stat} [getMetrics] get statistic path:bucket path:stat => {status?:string, data?:{bucket?:string, metrics?:{stat?:[obj]}}}

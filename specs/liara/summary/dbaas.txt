@@ -1,0 +1,19 @@
+# DBaaS | servers: https://api.liara.ir | security: [{"jwt":[]},{"bearerAuth":[]}]
+GET /v1/databases/{id} [getDatabase] Get a database path:id => {database?:{DBId?:string, type?:string, planID?:string, status?:string, scale?:integer, hostname?:string, publicNetwork?:boolean, version?:string, volumeSize?:integer, created_at?:string, dbName?:string, node?:{_id?:string, host?:string}, port?:integer, root_password?:string, internalPort?:integer, id?:string, hourlyPrice?:number, metaData?:{standaloneReplicaSet?:boolean, privateNetwork?:boolean}, username?:string}}
+DELETE /v1/databases/{id} [deleteDatabase] Delete a database path:id => ?
+GET /v1/databases [getListDatabases] Get all databases  => {databases?:[{DBId?:string, type?:string, planID?:string, status?:string, scale?:integer, hostname?:string, publicNetwork?:boolean, created_at?:string, internalPort?:integer, id?:string}]}
+POST /v1/databases [createDatabase] Create a database  BODY(application/json) {hostname?:string, options?:{standaloneReplicaSet?:boolean}, publicNetwork?:boolean, type?:string, planID?:string, version?:string} => {databaseID?:string}
+POST /v1/databases/{id}/actions/scale [TurnDatabase] Power on or power off a database path:id BODY(application/json) {scale:number} => ?
+POST /v1/databases/{id}/resize [resizeDatabase] Resize a database path:id BODY(application/json) {disk?:boolean, planID:string} => ?
+GET /v1/databases/{id}/backups [getListBackups] Get all backups path:id => {backups?:[{name?:string, lastModified?:string, etag?:string, size?:number}]}
+POST /v1/databases/{id}/backups [createBackup] Backup a database path:id => ?
+PATCH /v1/databases/{id}/settings [databasesSettings] Settings a database path:id BODY(application/json) {type?:string, options?:{maxConnections?:number, netBufferLength?:number, selectLimit?:number, maxAllowedPacket?:number, connectTimeout?:number, maxJoinSize?:number, clientEncoding?:string, sharedBuffers?:number}} => ?
+POST /v1/databases/{id}/backups/{name}/download [downloadBackup] Download a backup path:id path:name => {link?:string}
+POST /v1/databases/{id}/control-panel/{status} [changeControlPanel] Change control-panel status path:id path:status=enable|disable => {controlPanelID?:string}
+PATCH /v1/databases/{id}/public-network/{status} [changePublicNetwork] Change public network status path:id path:status=enable|disable => ?
+GET /v1/databases/{id}/metrics/cpu [getDatabaseCpuReports] Get cpu reports of database path:id query:since => {end?:number, result?:[{values?:[array], applet?:string}]}
+GET /v1/databases/{id}/metrics/memory [getDatabaseMemoryReports] Get memory reports of database path:id query:since => {end?:number, result?:[{values?:[array], applet?:string}]}
+GET /v1/databases/{id}/metrics/network-receive [getDatabaseNetworkReceiveReports] Get network-receive reports of database path:id query:since => {end?:number, result?:[{values?:[array], applet?:string}]}
+GET /v1/databases/{id}/metrics/network-transmit [getDatabaseNetworkTransmitReports] Get network-transmit reports of database path:id query:since => {end?:number, result?:[{values?:[array], applet?:string}]}
+GET /v1/databases/{id}/metrics/summary [getDatabaseSummaryReports] Get summary reports of database path:id => {cpuUsage?:[{value?:[obj], applet?:string}], memoryUsage?:[{value?:[obj], applet?:string}], disksUsage?:[{size?:string, usage?:string, reportedAt?:string}]}
+GET /v1/databases/{name}/events [getDatabaseEvents] Get events of the database path:name query:search? query:start? query:end? => {data:[{metaData?:object, values?:[array]}]}

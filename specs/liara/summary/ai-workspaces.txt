@@ -1,0 +1,12 @@
+# AI - Workspaces | servers: https://ai.liara.ir | security: [{"jwt":[]}]
+GET /v1/workspaces [listWorkspaces] List workspaces  => {workspaces?:[{_id?:string, name?:string, state?:enum(ACTIVE|FROZEN), plan?:enum(base|standard|pro), createdAt?:string, updatedAt?:string}]}
+POST /v1/workspaces [createWorkspace] Create a workspace  BODY(application/json) {name:string, plan:enum(base|standard|pro)} => {workspace?:{_id?:string}}
+GET /v1/workspaces/{workspaceName}/check-availability [checkWorkspaceAvailability] Check workspace name availability path:workspaceName => ?
+GET /v1/workspaces/{workspaceID} [getWorkspace] Get workspace details path:workspaceID => {workspace?:{_id?:string, name?:string, state?:enum(ACTIVE|FROZEN), plan?:enum(base|standard|pro), createdAt?:string, updatedAt?:string, providerPreferences?:enum(price|throughput)}}
+DELETE /v1/workspaces/{workspaceID} [deleteWorkspace] Delete a workspace path:workspaceID => ?
+PATCH /v1/workspaces/{workspaceID}/change-provider-preferences [changeProviderPreferences] Change provider preferences path:workspaceID BODY(application/json) {preference:enum(price|throughput|latency)} => ?
+POST /v1/workspaces/{workspaceID}/resize [resizeWorkspace] Resize workspace (change plan) path:workspaceID BODY(application/json) {plan:enum(base|standard|pro)} => ?
+POST /v1/workspaces/{workspaceID}/unfreeze [unfreezeWorkspace] Unfreeze workspace path:workspaceID => ?
+GET /v1/workspaces/{workspaceID}/free-tokens [getFreeTokens] Get free token usage path:workspaceID => object
+GET /v1/workspaces/{workspaceID}/models/{modelID}/limits [getModelLimits] Get model limits path:workspaceID path:modelID => {minimumBalance?:number, maximumToken?:integer}
+GET /v1/workspaces/{workspaceID}/activity [getWorkspaceActivity] Get workspace activity path:workspaceID query:filter?=twoMonth|month|day|hour|week query:key? => [{date?:string, data?:[{model?:string, total_tokens?:integer, total_cost_tomans?:number, request_count?:integer}]}]

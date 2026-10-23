@@ -1,0 +1,31 @@
+{
+  "name": "liara-deploy-agent",
+  "private": true,
+  "version": "0.1.0",
+  "description": "Persian-first chat-driven DevOps & SRE agent for Liara",
+  "workspaces": [
+    "packages/shared",
+    "apps/server",
+    "apps/web"
+  ],
+  "engines": {
+    "node": ">=22.13"
+  },
+  "scripts": {
+    "dev": "npm run dev -w @liara-agent/server & npm run dev -w @liara-agent/web",
+    "dev:server": "npm run dev -w @liara-agent/server",
+    "dev:web": "npm run dev -w @liara-agent/web",
+    "build": "npm run build -w @liara-agent/shared && npm run build -w @liara-agent/server && npm run build -w @liara-agent/web",
+    "typecheck": "npm run typecheck --workspaces --if-present",
+    "test": "npm run test -w @liara-agent/server",
+    "demo:replay": "npm run demo:replay -w @liara-agent/server",
+    "generate:liara": "node scripts/generate-liara-operations.mjs",
+    "probe:models": "npm run probe:models -w @liara-agent/server",
+    "docs:limitations": "npm run docs:limitations -w @liara-agent/server",
+    "postinstall": "npm run build -w @liara-agent/shared"
+  },
+  "devDependencies": {
+    "js-yaml": "^4.1.0",
+    "typescript": "^5.9.3"
+  }
+}

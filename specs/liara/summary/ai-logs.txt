@@ -1,0 +1,4 @@
+# AI - Logs | servers: https://ai.liara.ir | security: [{"jwt":[]}]
+GET /v1/workspaces/{workspaceID}/logs [listLogs] List logs path:workspaceID query:from? query:to? query:model? query:url?=/chat/completions|/embeddings|/image/generations|/image/edits query:page? query:count? query:key? => {logs?:[{_id?:string, type?:enum(ERROR_VALIDATION|PROVIDER_RESPONSE|ERROR_PROVIDER), content?:{model?:string, key?:string, details?:object}, workspace?:string, method?:string, url?:string, createdAt?:string}], count?:integer}
+GET /v1/workspaces/{workspaceID}/logs/{logID} [getLogDetailsApiKey] Get log details (API key auth) path:workspaceID path:logID => object
+GET /v1/workspaces/{workspaceID}/playground/logs/{logID} [getLogDetailsPlayground] Get log details (playground auth) path:workspaceID path:logID => object

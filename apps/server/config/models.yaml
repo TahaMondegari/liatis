@@ -1,0 +1,39 @@
+# Allowed models (BRIEF §7.2). The gateway refuses any model not listed here.
+# canonical id  -> provider id on Liara AI (https://ai.liara.ir/v1/models lists them as "openai/<id>").
+# Capabilities are NOT asserted here; they come from the live catalog
+# (supported_parameters) and from `npm run probe:models` results.
+provider:
+  name: liara-ai
+  # OpenAI-compatible base, override with AI_API_BASE_URL (e.g. a BoxAPI-compatible gateway)
+  default_base_url: "https://ai.liara.ir/api/{workspaceID}/v1"
+  catalog_url: "https://ai.liara.ir/v1/models"
+
+models:
+  - { id: gpt-6.1-sol, provider_id: openai/gpt-6.1-sol, kind: chat, tier: 4 }
+  - { id: gpt-6-astra, provider_id: openai/gpt-6-astra, kind: chat, tier: 5 }
+  - { id: gpt-6-luna, provider_id: openai/gpt-6-luna, kind: chat, tier: 1 }
+  - { id: gpt-6-sol, provider_id: openai/gpt-6-sol, kind: chat, tier: 3 }
+  - { id: gpt-5-mini, provider_id: openai/gpt-5-mini, kind: chat, tier: 1 }
+  - { id: gpt-5.6-luna, provider_id: openai/gpt-5.6-luna, kind: chat, tier: 1 }
+  - { id: gpt-5.6-terra, provider_id: openai/gpt-5.6-terra, kind: chat, tier: 3 }
+  - { id: gpt-5.6-sol, provider_id: openai/gpt-5.6-sol, kind: chat, tier: 4 }
+  - { id: gpt-5.4-mini, provider_id: openai/gpt-5.4-mini, kind: chat, tier: 2 }
+  - { id: gpt-5.3-codex, provider_id: openai/gpt-5.3-codex, kind: chat, tier: 3 }
+  - { id: text-embedding-3-small, provider_id: openai/text-embedding-3-small, kind: embedding, tier: 1 }
+  - { id: text-embedding-3-large, provider_id: openai/text-embedding-3-large, kind: embedding, tier: 2 }
+
+# Initial role defaults (BRIEF §7.3). Adjusted by probe evidence at runtime:
+# a model whose probe failed is skipped, and the next fallback is used.
+roles:
+  simple_classification: { primary: gpt-5-mini, fallback: [gpt-5.4-mini], reasoning_effort: minimal }
+  router_complex: { primary: gpt-6-luna, fallback: [gpt-5.6-luna, gpt-5-mini], reasoning_effort: low }
+  project_analysis: { primary: gpt-6-sol, fallback: [gpt-5.6-terra, gpt-5.6-luna], reasoning_effort: medium }
+  infrastructure_planning: { primary: gpt-6-luna, fallback: [gpt-5.6-luna, gpt-6-sol], reasoning_effort: low }
+  normal_reasoning: { primary: gpt-5.6-luna, fallback: [gpt-6-sol], reasoning_effort: low }
+  operations_chat: { primary: gpt-6-luna, fallback: [gpt-5.6-luna, gpt-6-sol], reasoning_effort: low }
+  root_cause_analysis: { primary: gpt-6-sol, fallback: [gpt-6.1-sol], reasoning_effort: medium }
+  incident_diagnosis: { primary: gpt-6-sol, fallback: [gpt-6.1-sol, gpt-6-astra], reasoning_effort: medium }
+  coding: { primary: gpt-5.3-codex, fallback: [gpt-6.1-sol], reasoning_effort: medium }
+  escalation: { primary: gpt-6.1-sol, fallback: [gpt-6-astra], reasoning_effort: high }
+  daily_digest: { primary: gpt-5-mini, fallback: [gpt-5.4-mini], reasoning_effort: minimal }
+  embeddings: { primary: text-embedding-3-small, fallback: [text-embedding-3-large] }

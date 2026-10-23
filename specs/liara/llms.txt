@@ -1,0 +1,242 @@
+# Liara OpenAPI Docs
+
+- [PaaS API](https://developers.liara.ir/pages/paas.md): Platform as a Service API for deploying and managing applications
+- [Get details of all projects](https://developers.liara.ir/pass/apps/get-details-of-all-projects.md): get all details of all projects that user owns
+- [Create a app](https://developers.liara.ir/pass/apps/create-a-app.md): create app that user owns
+- [Get details of a project](https://developers.liara.ir/pass/apps/get-details-of-a-project.md): get all details of all project that user owns
+- [Delete a app](https://developers.liara.ir/pass/apps/delete-a-app.md): delete app that user owns
+- [Turn on or off a app](https://developers.liara.ir/pass/apps/turn-on-or-off-a-app.md): turn on or off a app that user owns
+- [To restart a app](https://developers.liara.ir/pass/apps/to-restart-a-app.md): to restart app that user owns
+- [Change plan](https://developers.liara.ir/pass/apps/change-plan.md): create app that user owns
+- [Get logs of app](https://developers.liara.ir/pass/apps/get-logs-of-app.md): get logs of app that user owns
+- [Get events of the app](https://developers.liara.ir/pass/apps/get-events-of-the-app.md): get events of the app owned by user
+- [Get applets of app](https://developers.liara.ir/pass/apps/get-applets-of-app.md): get applets of app that user owns
+- [Get releases of app](https://developers.liara.ir/pass/apps/get-releases-of-app.md): get releases of app that user owns
+- [Deploy sources code](https://developers.liara.ir/pass/deploy/deploy-sources-code.md): deploy sources code that user owns
+- [Deploy releases](https://developers.liara.ir/pass/deploy/deploy-releases.md): deploy releases that user owns
+- [Zero downtime](https://developers.liara.ir/pass/settings/zero-downtime.md): zero downtime that user owns
+- [Default subdomain](https://developers.liara.ir/pass/settings/default-subdomain.md): default subdomain that user owns
+- [IP static](https://developers.liara.ir/pass/settings/ip-static.md): ip static that user owns
+- [Read only](https://developers.liara.ir/pass/settings/read-only.md): read only that user owns
+- [Update envs](https://developers.liara.ir/pass/settings/update-envs.md): update envs that user owns
+- [Get ftps](https://developers.liara.ir/pass/disks/get-ftps.md): get ftps that user owns
+- [Create ftp](https://developers.liara.ir/pass/disks/create-ftp.md): create ftp that user owns
+- [Get disks](https://developers.liara.ir/pass/disks/get-disks.md): get disks that user owns
+- [Get backups disk](https://developers.liara.ir/pass/disks/get-backups-disk.md): get backups disk that user owns
+- [Create backup disk](https://developers.liara.ir/pass/disks/create-backup-disk.md): create backup disk that user owns
+- [Download backup disk](https://developers.liara.ir/pass/disks/download-backup-disk.md): download backup disk that user owns
+- [Resize disk](https://developers.liara.ir/pass/disks/resize-disk.md): resize disk that user owns
+- [Create a disk](https://developers.liara.ir/pass/disks/create-a-disk.md): create a disk that user owns
+- [Delete a disk](https://developers.liara.ir/pass/disks/delete-a-disk.md): delete a disk that user owns
+- [Delete a ftp](https://developers.liara.ir/pass/disks/delete-a-ftp.md): delete a ftp that user owns
+- [Check a domain](https://developers.liara.ir/pass/domains/check-a-domain.md): check a domain that user owns
+- [Get all domains](https://developers.liara.ir/pass/domains/get-all-domains.md): get all domains that user owns
+- [Create a domain](https://developers.liara.ir/pass/domains/create-a-domain.md): create a domain that user owns
+- [Set a domain for project](https://developers.liara.ir/pass/domains/set-a-domain-for-project.md): set a domain for project that user owns
+- [Redirect a domain](https://developers.liara.ir/pass/domains/redirect-a-domain.md): redirect a domain that user owns
+- [Disable ssl](https://developers.liara.ir/pass/domains/disable-ssl.md): disable ssl that user owns
+- [Enable ssl](https://developers.liara.ir/pass/domains/enable-ssl.md): enable ssl that user owns
+- [Delete a domain](https://developers.liara.ir/pass/domains/delete-a-domain.md): delete a domain that user owns
+- [Get summary reports of app](https://developers.liara.ir/pass/reports/get-summary-reports-of-app.md): get summary reports of app that user owns
+- [Get cpu reports of app](https://developers.liara.ir/pass/reports/get-cpu-reports-of-app.md): get cpu reports of app that user owns
+- [Get memory reports of app](https://developers.liara.ir/pass/reports/get-memory-reports-of-app.md): get memory reports of app that user owns
+- [Get network-receive reports of app](https://developers.liara.ir/pass/reports/get-network-receive-reports-of-app.md): get network-receive reports of app that user owns
+- [Get network-transmit reports of app](https://developers.liara.ir/pass/reports/get-network-transmit-reports-of-app.md): get network-transmit reports of app that user owns
+- [DBaaS API](https://developers.liara.ir/pages/dbaas.md): Database as a Service API for managing cloud databases
+- [Get a database](https://developers.liara.ir/dbass/databases/get-a-database.md): get a database that user owns
+- [Delete a database](https://developers.liara.ir/dbass/databases/delete-a-database.md): delete a database that user owns
+- [Get all databases](https://developers.liara.ir/dbass/databases/get-all-databases.md): get all databases that user owns
+- [Create a database](https://developers.liara.ir/dbass/databases/create-a-database.md): create a database that user owns
+- [Power on or power off a database](https://developers.liara.ir/dbass/databases/power-on-or-power-off-a-database.md): power on or power off a database that user owns
+- [Resize a database](https://developers.liara.ir/dbass/databases/resize-a-database.md): resize a database that user owns
+- [Settings a database](https://developers.liara.ir/dbass/databases/settings-a-database.md): settings a database that user owns
+- [Change control-panel status](https://developers.liara.ir/dbass/databases/change-control-panel-status.md): change control-panel status that user owns
+- [Change public network status](https://developers.liara.ir/dbass/databases/change-public-network-status.md): change public network status that user owns
+- [Get all backups](https://developers.liara.ir/dbass/backups/get-all-backups.md): get all backups that user owns
+- [Backup a database](https://developers.liara.ir/dbass/backups/backup-a-database.md): backup a database that user owns
+- [Download a backup](https://developers.liara.ir/dbass/backups/download-a-backup.md): download a backup that user owns
+- [Get cpu reports of database](https://developers.liara.ir/dbass/reports/get-cpu-reports-of-database.md): get cpu reports of database that user owns
+- [Get memory reports of database](https://developers.liara.ir/dbass/reports/get-memory-reports-of-database.md): get memory reports of database that user owns
+- [Get network-receive reports of database](https://developers.liara.ir/dbass/reports/get-network-receive-reports-of-database.md): get network-receive reports of database that user owns
+- [Get network-transmit reports of database](https://developers.liara.ir/dbass/reports/get-network-transmit-reports-of-database.md): get network-transmit reports of database that user owns
+- [Get summary reports of database](https://developers.liara.ir/dbass/reports/get-summary-reports-of-database.md): get summary reports of database that user owns
+- [Get events of the database](https://developers.liara.ir/dbass/get-events-of-the-database.md): get events of the database owned by user
+- [Object Storage API](https://developers.liara.ir/pages/object-storage.md): Scalable object storage solution for storing and managing data
+- [List all Buckets](https://developers.liara.ir/object-storage/bucket/list-all-buckets.md): List all Bucket
+- [Create Bucket](https://developers.liara.ir/object-storage/bucket/create-bucket.md): creates a new bucket on an object storage
+- [list migration operation](https://developers.liara.ir/object-storage/bucket/list-migration-operation.md): list migration operation
+- [change Bucket Access Policy](https://developers.liara.ir/object-storage/bucket/change-bucket-access-policy.md): Change Bucket Access policy on an object storage ( public / private )
+- [Upgrade Bucket](https://developers.liara.ir/object-storage/bucket/upgrade-bucket.md): Upgrade Bucket plan ( just make space bigger )
+- [Get Single Buckets](https://developers.liara.ir/object-storage/bucket/get-single-buckets.md)
+- [Destroy Bucket](https://developers.liara.ir/object-storage/bucket/destroy-bucket.md): Delete Bucket on an object storage
+- [Check Bucket availability](https://developers.liara.ir/object-storage/bucket/check-bucket-availability.md): Check if you can create Bucket with specified Name.
+- [Migrating buckets](https://developers.liara.ir/object-storage/bucket/migrating-buckets.md): Move data from one bucket to another
+- [List storage service buckets](https://developers.liara.ir/object-storage/bucket/list-storage-service-buckets.md): List previous buckets of storage service in liara.
+- [Get List of Keys](https://developers.liara.ir/object-storage/key/get-list-of-keys.md)
+- [Create Keys](https://developers.liara.ir/object-storage/key/create-keys.md): Create access and secret key
+- [Get Key](https://developers.liara.ir/object-storage/key/get-key.md): Get a key
+- [Delete Key](https://developers.liara.ir/object-storage/key/delete-key.md): Delete access key
+- [Update key](https://developers.liara.ir/object-storage/key/update-key.md): Update buckets of key ( redefine )
+- [Revoke secret key](https://developers.liara.ir/object-storage/key/revoke-secret-key.md): Revoke secret key
+- [Download Object](https://developers.liara.ir/object-storage/object/download-object.md): Return presigned url for download object
+- [Upload Object](https://developers.liara.ir/object-storage/object/upload-object.md): Return presigned url for download object
+- [List Objects](https://developers.liara.ir/object-storage/object/list-objects.md): Return list of objects ( max:50, min:1 )
+- [Delete Object](https://developers.liara.ir/object-storage/object/delete-object.md): Delete an object from storage
+- [Get Stat Object](https://developers.liara.ir/object-storage/object/get-stat-object.md)
+- [Create Folder](https://developers.liara.ir/object-storage/folder/create-folder.md): Create Folder in Bucket
+- [Delete Folder](https://developers.liara.ir/object-storage/folder/delete-folder.md): Delete Folder in Bucket
+- [metrics summary](https://developers.liara.ir/object-storage/metrics/metrics-summary.md)
+- [hisotrical metrics](https://developers.liara.ir/object-storage/metrics/hisotrical-metrics.md)
+- [get statistic](https://developers.liara.ir/object-storage/metrics/get-statistic.md)
+- [DNS API](https://developers.liara.ir/pages/dns.md): DNS management API for zones and records
+- [List all zones](https://developers.liara.ir/dns/zone/list-all-zones.md): list all zones that user owns
+- [Create Zone](https://developers.liara.ir/dns/zone/create-zone.md): creates a new zone on dns server
+- [Get Zone](https://developers.liara.ir/dns/zone/get-zone.md): Get this zone, all dns records
+- [Delete Zone](https://developers.liara.ir/dns/zone/delete-zone.md): Deletes this zone, all dns records
+- [check nameserver](https://developers.liara.ir/dns/check-name-servers/check-nameserver.md): check nameserver of zone
+- [Get all dns record](https://developers.liara.ir/dns/dns-record/get-all-dns-record.md): Get all Dns Records on this zone
+- [Create dns record](https://developers.liara.ir/dns/dns-record/create-dns-record.md): Creates a new dns record, returns the dns record on creation
+- [Get dns record](https://developers.liara.ir/dns/dns-record/get-dns-record.md): Get Dns Record data on this zone
+- [edit dns record](https://developers.liara.ir/dns/dns-record/edit-dns-record.md): you can not edit type of dns record
+- [delete dns record](https://developers.liara.ir/dns/dns-record/delete-dns-record.md): Delete dns record from this zone
+- [Mail API](https://developers.liara.ir/pages/mail.md): Email delivery platform for incoming and outgoing mail
+- [get all mail servers](https://developers.liara.ir/mail/mails/get-all-mail-servers.md)
+- [create mail server](https://developers.liara.ir/mail/mails/create-mail-server.md)
+- [get single mail server](https://developers.liara.ir/mail/mails/get-single-mail-server.md)
+- [delete mail server](https://developers.liara.ir/mail/mails/delete-mail-server.md)
+- [edit mail server](https://developers.liara.ir/mail/mails/edit-mail-server.md)
+- [count number of sent mails every day](https://developers.liara.ir/mail/mails/count-number-of-sent-mails-every-day.md)
+- [mail server check dns status](https://developers.liara.ir/mail/mails/mail-server-check-dns-status.md)
+- [check if domain name is available](https://developers.liara.ir/mail/mails/check-if-domain-name-is-available.md)
+- [unfreeze mail server - If you had reserved a plan, it will be your new plan.](https://developers.liara.ir/mail/mails/unfreeze-mail-server--if-you-had-reserved-a-plan-it-will-be-your-new-plan.md)
+- [gain more info on recent usage](https://developers.liara.ir/mail/mails/gain-more-info-on-recent-usage.md)
+- [get credential to connect to mail server with SMTP](https://developers.liara.ir/mail/smtp/get-credential-to-connect-to-mail-server-with-smtp.md)
+- [generate credentials to connet mail server with SMTP](https://developers.liara.ir/mail/smtp/generate-credentials-to-connet-mail-server-with-smtp.md)
+- [revoke credentials to connect mail server with SMTP](https://developers.liara.ir/mail/smtp/revoke-credentials-to-connect-mail-server-with-smtp.md)
+- [delete smtp credential](https://developers.liara.ir/mail/smtp/delete-smtp-credential.md)
+- [get all mail accounts](https://developers.liara.ir/mail/accounts/get-all-mail-accounts.md)
+- [add mail account](https://developers.liara.ir/mail/accounts/add-mail-account.md)
+- [check if mail account is available](https://developers.liara.ir/mail/accounts/check-if-mail-account-is-available.md)
+- [delete mail account](https://developers.liara.ir/mail/accounts/delete-mail-account.md)
+- [get all inbound rules.](https://developers.liara.ir/mail/inboundrules/get-all-inbound-rules.md)
+- [add inbound rule.](https://developers.liara.ir/mail/inboundrules/add-inbound-rule.md)
+- [delete inbound rule.](https://developers.liara.ir/mail/inboundrules/delete-inbound-rule.md)
+- [get all mails](https://developers.liara.ir/mail/messages/get-all-mails.md)
+- [send a mail](https://developers.liara.ir/mail/messages/send-a-mail.md)
+- [get single mail](https://developers.liara.ir/mail/messages/get-single-mail.md)
+- [get single mail html](https://developers.liara.ir/mail/messages/get-single-mail-html.md)
+- [generate temporary access to email html](https://developers.liara.ir/mail/messages/generate-temporary-access-to-email-html.md)
+- [delete a message permenantly](https://developers.liara.ir/mail/messages/delete-a-message-permenantly.md)
+- [trash and untrash a message](https://developers.liara.ir/mail/messages/trash-and-untrash-a-message.md)
+- [get all extra address to forwarding mails](https://developers.liara.ir/mail/forward/get-all-extra-address-to-forwarding-mails.md)
+- [add address endpoint to forwarding mails](https://developers.liara.ir/mail/forward/add-address-endpoint-to-forwarding-mails.md)
+- [delete extra endpoint address](https://developers.liara.ir/mail/forward/delete-extra-endpoint-address.md)
+- [get all attachments for message](https://developers.liara.ir/mail/attachments/get-all-attachments-for-message.md)
+- [download attachment](https://developers.liara.ir/mail/attachments/download-attachment.md)
+- [get all events for message](https://developers.liara.ir/mail/event/get-all-events-for-message.md)
+- [get all tags](https://developers.liara.ir/mail/tags/get-all-tags.md)
+- [create a new tag](https://developers.liara.ir/mail/tags/create-a-new-tag.md)
+- [get tags stats](https://developers.liara.ir/mail/tags/get-tags-stats.md)
+- [get cuurent mail server plan history](https://developers.liara.ir/mail/plan/get-cuurent-mail-server-plan-history.md)
+- [change mail server plan](https://developers.liara.ir/mail/plan/change-mail-server-plan.md): Upgrades take effect immediately, while downgrades are scheduled and applied after the current plan ends. Click on the request body schema to see all available plans.
+- [remove a reserved plan](https://developers.liara.ir/mail/plan/remove-a-reserved-plan.md): Click on the request body schema to see all available plans.
+- [File Browser API](https://developers.liara.ir/pages/file-browser.md): File management API for disks attached to your applications
+- [Get list from FileBrowser](https://developers.liara.ir/file-browser/disks/get-list-from-filebrowser.md)
+- [Search file or dir in FileBrowser](https://developers.liara.ir/file-browser/disks/search-file-or-dir-in-filebrowser.md)
+- [Serve file from FileBrowser](https://developers.liara.ir/file-browser/disks/serve-file-from-filebrowser.md)
+- [Create link for file in FileBrowser](https://developers.liara.ir/file-browser/disks/create-link-for-file-in-filebrowser.md)
+- [Rename file or dir in FileBrowser](https://developers.liara.ir/file-browser/disks/rename-file-or-dir-in-filebrowser.md)
+- [Create file or dir in FileBrowser](https://developers.liara.ir/file-browser/disks/create-file-or-dir-in-filebrowser.md)
+- [Extract file in FileBrowser](https://developers.liara.ir/file-browser/disks/extract-file-in-filebrowser.md)
+- [Upload file in FileBrowser](https://developers.liara.ir/file-browser/disks/upload-file-in-filebrowser.md)
+- [Delete file or dir in FileBrowser](https://developers.liara.ir/file-browser/disks/delete-file-or-dir-in-filebrowser.md)
+- [IaaS API](https://developers.liara.ir/pages/iaas.md): Infrastructure as a Service API for managing virtual machines
+- [Get all vms](https://developers.liara.ir/iaas/vms/get-all-vms.md): get all vms that user owns
+- [Create a vm](https://developers.liara.ir/iaas/vms/create-a-vm.md): create a vm that user owns
+- [Get vm details](https://developers.liara.ir/iaas/vms/get-vm-details.md): get a vm that user owns
+- [Delete a vm](https://developers.liara.ir/iaas/vms/delete-a-vm.md): delete a vm that user owns
+- [Unfreeze a vm](https://developers.liara.ir/iaas/vms/unfreeze-a-vm.md): unfreeze a vm that user owns
+- [Get traffic graph of a vm](https://developers.liara.ir/iaas/vms/get-traffic-graph-of-a-vm.md): get traffic graph of a vm that user owns
+- [Get traffic volume of a vm](https://developers.liara.ir/iaas/vms/get-traffic-volume-of-a-vm.md): get traffic volume of a vm that user owns
+- [Set vm power](https://developers.liara.ir/iaas/vms/set-vm-power.md): set power of a vm that user owns
+- [Get disk details](https://developers.liara.ir/iaas/vms/get-disk-details.md): get disk details of a vm that user owns
+- [Create a new disk for a VM](https://developers.liara.ir/iaas/vms/create-a-new-disk-for-a-vm.md): create a disk for a vm that user owns
+- [Extend a vm Disk](https://developers.liara.ir/iaas/vms/extend-a-vm-disk.md): extend a vm that user owns
+- [Delete a disk](https://developers.liara.ir/iaas/vms/delete-a-disk.md): Delete a disk of a vm that user owns
+- [Reset a vm network](https://developers.liara.ir/iaas/vms/reset-a-vm-network.md): reset network a vm that user owns
+- [Get vm operations](https://developers.liara.ir/iaas/vms/get-vm-operations.md): get operations of a vm that user owns
+- [Reset a vm password](https://developers.liara.ir/iaas/vms/reset-a-vm-password.md): reset password of a vm that user owns
+- [Resize a vm](https://developers.liara.ir/iaas/vms/resize-a-vm.md): resize a vm that user owns
+- [Get all plans](https://developers.liara.ir/iaas/vms/get-all-plans.md): get all Iaas plans
+- [Get all available operating systems](https://developers.liara.ir/iaas/vms/get-all-available-operating-systems.md): get all available operating systems
+- [Ai](https://developers.liara.ir/pages/ai.md)
+- [Create a chat completion](https://developers.liara.ir/ai-chat-completions/chat-completions/create-a-chat-completion.md): Creates a model response for the given conversation. Supports streaming via SSE, tool calling, and multi-modal input (text, images, files).
+- [List available models](https://developers.liara.ir/ai-chat-completions/models/list-available-models.md): Lists all AI models available for inference in an OpenAI-compatible format.
+- [Generate images](https://developers.liara.ir/ai-image-generation/image-generations/generate-images.md): Generates images from a text prompt. Supports models from OpenAI (gpt-image-1, gpt-image-2) and Google Gemini (Gemini image models).
+- [Edit images](https://developers.liara.ir/ai-image-generation/image-edits/edit-images.md): Edits an existing image based on a text prompt. Requires `multipart/form-data` content type.
+- [Create embeddings](https://developers.liara.ir/ai-embeddings/embeddings/create-embeddings.md): Generates embeddings for the given input text. Supports single strings or arrays of strings. Response includes token usage and cost information.
+- [Generate speech from text](https://developers.liara.ir/ai-tts/text-to-speech/generate-speech-from-text.md): Generates speech audio from the provided text using the specified text-to-speech model.
+- [Transcribe audio](https://developers.liara.ir/ai-stt/audio-transcriptions/transcribe-audio.md): Transcribes the provided audio using the specified speech-to-text model.
+- [List workspaces](https://developers.liara.ir/ai-workspaces/workspaces/list-workspaces.md): Lists all workspaces owned by the authenticated user.
+- [Create a workspace](https://developers.liara.ir/ai-workspaces/workspaces/create-a-workspace.md): Creates a new AI workspace. Only one free (base) workspace is allowed per user. The workspace name must be unique.
+- [Check workspace name availability](https://developers.liara.ir/ai-workspaces/workspaces/check-workspace-name-availability.md): Checks if a workspace name is available for use.
+- [Get workspace details](https://developers.liara.ir/ai-workspaces/workspaces/get-workspace-details.md): Gets detailed information about a specific workspace.
+- [Delete a workspace](https://developers.liara.ir/ai-workspaces/workspaces/delete-a-workspace.md): Soft-deletes a workspace. The workspace will be marked as deleted but not permanently removed.
+- [Change provider preferences](https://developers.liara.ir/ai-workspaces/workspace-actions/change-provider-preferences.md): Changes the provider routing preference for a workspace. This affects how requests are routed to AI providers.
+- [Resize workspace (change plan)](https://developers.liara.ir/ai-workspaces/workspace-actions/resize-workspace-change-plan.md): Changes the plan of a workspace. The user must have sufficient balance for the new plan's hourly price.
+- [Unfreeze workspace](https://developers.liara.ir/ai-workspaces/workspace-actions/unfreeze-workspace.md): Unfreezes a frozen workspace. The user must have sufficient balance to cover the workspace's hourly plan cost.
+- [Get free token usage](https://developers.liara.ir/ai-workspaces/workspace-activity/get-free-token-usage.md): Calculates the free token usage for a workspace.
+- [Get workspace activity](https://developers.liara.ir/ai-workspaces/workspace-activity/get-workspace-activity.md): Gets aggregated usage activity for a workspace grouped by date and model. Time filter availability depends on the workspace plan: - `base`: hour, day, week - `standard`: hour, day, week, month - `pro`: all filters available
+- [Get model limits](https://developers.liara.ir/ai-workspaces/model-limits/get-model-limits.md): Gets the minimum balance and maximum tokens for a specific model within a workspace. Only applies to chat completion models.
+- [List API keys](https://developers.liara.ir/ai-keys/api-keys/list-api-keys.md): Lists all API keys owned by the authenticated user, including workspace associations.
+- [Create an API key](https://developers.liara.ir/ai-keys/api-keys/create-an-api-key.md): Creates a new API key associated with one or more workspaces. The response includes the key token which is only shown once upon creation.
+- [Update an API key](https://developers.liara.ir/ai-keys/api-keys/update-an-api-key.md): Updates an API key's name, workspaces, or enabled status.
+- [Delete an API key](https://developers.liara.ir/ai-keys/api-keys/delete-an-api-key.md): Soft-deletes an API key. The key will be marked as deleted but not permanently removed.
+- [List all models](https://developers.liara.ir/ai-models/model-catalog-v1/list-all-models.md): Returns all available AI models with full details. No authentication required.
+- [Get a model](https://developers.liara.ir/ai-models/model-catalog-v1/get-a-model.md): Gets a single model by its ID. No authentication required.
+- [List models with filters](https://developers.liara.ir/ai-models/model-catalog-v2/list-models-with-filters.md): Returns paginated model list with filtering, sorting, and search capabilities. No authentication required. Page size is 20.
+- [List logs](https://developers.liara.ir/ai-logs/logs/list-logs.md): Lists paginated request logs for a workspace. Date range is constrained by the workspace plan's log retention period.
+- [Get log details (API key auth)](https://developers.liara.ir/ai-logs/logs/get-log-details-api-key-auth.md): Gets detailed information about a specific log entry. Authenticated via API key.
+- [Get log details (playground auth)](https://developers.liara.ir/ai-logs/logs/get-log-details-playground-auth.md): Gets detailed information about a specific playground log entry. Authenticated via JWT.
+- [Playground chat completion](https://developers.liara.ir/ai-playground/playground-chat/playground-chat-completion.md): Creates a chat completion in the playground. Requires `ai.operate` or `ai.manage` permission. Uses the same request/response format as the API key chat completion endpoint.
+- [Playground list models](https://developers.liara.ir/ai-playground/playground-chat/playground-list-models.md): Lists available models in the playground. Requires `ai.operate` or `ai.manage` permission. Returns models in OpenAI-compatible format.
+- [Playground image generation](https://developers.liara.ir/ai-playground/playground-images/playground-image-generation.md): Generates images in the playground. Requires `ai.operate` or `ai.manage` permission. Uses the same request/response format as the API key image generation endpoint.
+- [Playground image edit](https://developers.liara.ir/ai-playground/playground-images/playground-image-edit.md): Edits images in the playground. Requires `ai.operate` or `ai.manage` permission. Requires `multipart/form-data` content type.
+- [Get current user billing information](https://developers.liara.ir/billing/billing/get-current-user-billing-information.md): Returns the current user's balance and billing configuration.
+- [Get current user and console information](https://developers.liara.ir/account/user/get-current-user-and-console-information.md): Returns the authenticated user profile and console configuration. In team mode, the response also includes a `team` object.
+- [Get current subscription plan](https://developers.liara.ir/account/user/get-current-subscription-plan.md): Returns the current subscription plan of the user (or the team in team mode). Returns an empty object when there is no active plan.
+- [Get two-factor authentication status](https://developers.liara.ir/account/user/get-two-factor-authentication-status.md): Returns the two-factor authentication status of the user. Both fields are omitted for teams.
+- [Get remaining free credit](https://developers.liara.ir/account/user/get-remaining-free-credit.md): Returns the remaining free credit of the user. The field is omitted for teams.
+- [Get Git integrations](https://developers.liara.ir/account/user/get-git-integrations.md): Returns the connected Git providers and their repository integrations.
+- [Get UTM information](https://developers.liara.ir/account/user/get-utm-information.md): Returns the UTM campaign the account joined through, or null if none.
+
+## OpenAPI Specs
+
+- [ai-chat-completions](/spec/ai-chat-completions.yaml)
+- [ai-embeddings](/spec/ai-embeddings.yaml)
+- [ai-image-generation](/spec/ai-image-generation.yaml)
+- [ai-keys](/spec/ai-keys.yaml)
+- [ai-logs](/spec/ai-logs.yaml)
+- [ai-models](/spec/ai-models.yaml)
+- [ai-playground](/spec/ai-playground.yaml)
+- [ai-stt](/spec/ai-stt.yaml)
+- [ai-tts](/spec/ai-tts.yaml)
+- [ai-workspaces](/spec/ai-workspaces.yaml)
+- [billing](/spec/billing.yaml)
+- [database-inspector](/spec/database-inspector.yaml)
+- [dbaas](/spec/dbaas.yaml)
+- [dns](/spec/dns.yaml)
+- [file-browser](/spec/file-browser.yaml)
+- [Iaas](/spec/Iaas.yaml)
+- [mail](/spec/mail.yaml)
+- [me](/spec/me.yaml)
+- [object-storage](/spec/object-storage.yaml)
+- [paas](/spec/paas.yaml)
+
+## Optional
+
+- [Documentation](https://docs.liara.ir)
+- [Blog](https://liara.ir/blog)
+
+
+This documentation is built and hosted on [Mintlify](https://mintlify.com), a developer documentation platform.
